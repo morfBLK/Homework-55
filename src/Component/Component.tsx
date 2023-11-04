@@ -3,16 +3,14 @@ import {Ingredient} from "../types";
 import './Component.css'
 
 interface Props {
-  Component:Ingredient;
+  Component: Ingredient;
   amount: number;
   onClickAdd: React.MouseEventHandler;
-  onClickDelete:React.MouseEventHandler;
+  onClickDelete: React.MouseEventHandler;
 }
 
 
-
-
-const Component:React.FC<Props> = (props) => {
+const Component: React.FC<Props> = (props) => {
   return (
     <div className='Component-box'>
       <img src={props.Component.image} alt={props.Component.name}/>

@@ -1,4 +1,4 @@
-import  {useState} from 'react';
+import {useState} from 'react';
 import './App.css';
 import Burger from "./Burger/Burger";
 import {Ingredient} from "./types";
@@ -17,12 +17,9 @@ const INGREDIENTS: Ingredient[] = [
 ]
 
 
-
 const getBurger: string [] = [];
 
 function App() {
-
-
 
 
   const [ingredientsPrint, setIngredientsPrint] = useState([
@@ -42,8 +39,6 @@ function App() {
   }, 30)
 
 
-
-
   const amount = (index: number) => {
     setIngredientsPrint(prev => prev.map((item) => {
       return item.id === index + 1 ? {
@@ -55,9 +50,8 @@ function App() {
   }
 
 
-
   const deleteAmount = (index: number) => {
-    setIngredientsPrint(prev => prev.map((item)=>{
+    setIngredientsPrint(prev => prev.map((item) => {
       return item.id === index + 1 && item.count ? {
         ...item,
         count: item.count - 1,
@@ -71,16 +65,13 @@ function App() {
   }
 
 
-
-
   const printIngredients = INGREDIENTS.map((one) => {
     const index = INGREDIENTS.indexOf(one);
     return (
       <Component Component={one} amount={ingredientsPrint[index].count}
-                     onClickAdd={() => amount(index)} key={index} onClickDelete={() => deleteAmount(index)}/>
+                 onClickAdd={() => amount(index)} key={index} onClickDelete={() => deleteAmount(index)}/>
     )
   })
-
 
 
   return (
