@@ -1,0 +1,28 @@
+body {
+    background: #debe67;
+    background-size: cover;
+}
+
+.burger-box {
+    width: 60%;
+    border: 8px solid #475dbd;
+    border-radius: 25px;
+    margin: 10px;
+    background: #cbb4b4;
+}
+
+.ingredient-box {
+    width: 35%;
+}
+
+
+
+.App {
+    display: flex;
+    justify-content: space-between;
+    background: rgb(128, 128, 128);
+    margin: 200px;
+    border-radius: 25px;
+    color: white;
+
+}
